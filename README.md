@@ -1,1 +1,0 @@
-# Kandy For Scale
