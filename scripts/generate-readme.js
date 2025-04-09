@@ -1,5 +1,4 @@
 const fs = require("fs");
-const fetch = require("node-fetch");
 
 const members = require("../members.json");
 const token = process.env.GITHUB_TOKEN;
