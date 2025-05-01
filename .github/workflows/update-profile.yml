@@ -2,7 +2,7 @@ name: Update Org Profile
 
 on:
   schedule:
-    - cron: "0 0 1 * *" # every day at midnight UTC
+    - cron: "0 0 1 * *" # every 1st day of the month at midnight UTC
   workflow_dispatch:
 
 jobs:
@@ -31,8 +31,8 @@ jobs:
           git config user.email "github-actions@github.com"
           git add profile/README.md
           git commit -m "🔄 Auto-update org profile README" || echo "No changes to commit"
-          
-      - name: Who am I?
+
+      - name: Who am I? (test PAT authentication)
         env:
           TOKEN: ${{ secrets.ORG_README_UPDATE }}
         run: |
@@ -42,7 +42,11 @@ jobs:
         env:
           TOKEN: ${{ secrets.ORG_README_UPDATE }}
         run: |
-          git remote set-url origin "https://x-access-token:${TOKEN}@github.com/Kandy-Agency/.github.git"
-          git push origin HEAD:main
-
+          # Disable GitHub Actions bot credential helper
+          git config --global --unset credential.helper
           
+          # Set remote with PAT explicitly
+          git remote set-url origin "https://x-access-token:${TOKEN}@github.com/Kandy-Agency/.github.git"
+          
+          # Push changes
+          git push origin HEAD:main
