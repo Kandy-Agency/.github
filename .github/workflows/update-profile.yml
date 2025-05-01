@@ -26,10 +26,10 @@ jobs:
         run: node scripts/generate-readme.js
 
       - name: Who am I?
-      env:
-        TOKEN: ${{ secrets.ORG_README_UPDATE }}
-      run: |
-        curl -H "Authorization: token ${TOKEN}" https://api.github.com/user
+        env:
+          TOKEN: ${{ secrets.ORG_README_UPDATE }}
+        run: |
+          curl -H "Authorization: token ${TOKEN}" https://api.github.com/user
 
       - name: Commit changes
         run: |
