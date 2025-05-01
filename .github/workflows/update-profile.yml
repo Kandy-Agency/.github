@@ -8,6 +8,10 @@ on:
 jobs:
   update-readme:
     runs-on: ubuntu-latest
+    permissions:
+      # Give the default GITHUB_TOKEN write permission to commit and push the
+      # added or changed files to the repository.
+      contents: write
     steps:
       - name: Checkout repo
         uses: actions/checkout@v3
@@ -42,11 +46,8 @@ jobs:
         env:
           TOKEN: ${{ secrets.ORG_README_UPDATE }}
         run: |
-          # Disable GitHub Actions bot credential helper
-          git config --global --unset credential.helper
-          
           # Set remote with PAT explicitly
           git remote set-url origin "https://x-access-token:${TOKEN}@github.com/Kandy-Agency/.github.git"
           
-          # Push changes
-          git push origin HEAD:main
+          # Push without using any credential helper
+          git -c credential.helper= push origin HEAD:main
