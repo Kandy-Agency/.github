@@ -27,11 +27,11 @@ jobs:
 
       - name: Commit changes
         env:
-          TOKEN: ${{ secrets.README_UPDATE }}
+          TOKEN: ${{ secrets.ORG_README_UPDATE }}
         run: |
           git config user.name "github-actions"
           git config user.email "github-actions@github.com"
           git remote set-url origin https://x-access-token:${TOKEN}@github.com/Kandy-Agency/.github.git
           git add profile/README.md
           git commit -m "🔄 Auto-update org profile README" || echo "No changes to commit"
-          git push
+          git push origin HEAD:main
