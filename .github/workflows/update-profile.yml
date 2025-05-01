@@ -25,13 +25,22 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: node scripts/generate-readme.js
 
+      - name: Who am I?
+      env:
+        TOKEN: ${{ secrets.ORG_README_UPDATE }}
+      run: |
+        curl -H "Authorization: token ${TOKEN}" https://api.github.com/user
+
       - name: Commit changes
-        env:
-          TOKEN: ${{ secrets.ORG_README_UPDATE }}
         run: |
           git config user.name "github-actions"
           git config user.email "github-actions@github.com"
-          git remote set-url origin https://x-access-token:${TOKEN}@github.com/Kandy-Agency/.github.git
           git add profile/README.md
           git commit -m "🔄 Auto-update org profile README" || echo "No changes to commit"
+      - name: Push changes
+        env:
+          TOKEN: ${{ secrets.ORG_README_UPDATE }}
+        run: |
+          git remote set-url origin https://x-access-token:${TOKEN}@github.com/Kandy-Agency/.github.git
           git push origin HEAD:main
+          
