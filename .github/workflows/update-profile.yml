@@ -27,7 +27,7 @@ jobs:
       - name: Generate README
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        run: node scripts/generate-readme.js
+        run: node /profile/scripts/generate-readme.js
 
       - name: Commit changes
         run: |
@@ -48,6 +48,6 @@ jobs:
         run: |
           # Set remote with PAT explicitly
           git remote set-url origin "https://x-access-token:${TOKEN}@github.com/Kandy-Agency/.github.git"
-          
+
           # Push without using any credential helper
           git -c credential.helper= push origin HEAD:main
