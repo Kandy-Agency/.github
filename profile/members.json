@@ -1,5 +1,4 @@
 [
   { "username": "eyyMinda", "role": "mid", "department": "Development" },
-  { "username": "LukasV2000", "role": "senior", "department": "Development" },
-  { "username": "TomasGi", "role": "junior", "department": "Development" }
+  { "username": "LukasV2000", "role": "senior", "department": "Development" }
 ]
