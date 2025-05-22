@@ -36,13 +36,5 @@ We specialize in scalable Shopify solutions, modern web apps, and agency-level d
     </a><br/>
     🚀
   </td>
-
-  <td align="center">
-    <a href="https://github.com/TomasGi"><strong>@TomasGi</strong></a><br/>
-    <a href="https://github.com/TomasGi">
-      <img src="https://avatars.githubusercontent.com/u/30022926?v=4" width="80" height="80" style="border-radius: 50%;" alt="@TomasGi"/>
-    </a><br/>
-    🌱
-  </td>
   </tr>
 </table>
