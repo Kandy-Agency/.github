@@ -74,11 +74,13 @@ function formatTechstack(techstack) {
   const detailedTable = `
 <h2 align="center">👥 Meet the Team</h2>
 
-<table align="center">
-  <tr>
-    ${detailedColumns.join("\n")}
-  </tr>
-</table>`;
+<div style="overflow-x: auto; margin: 20px 0;">
+  <table align="center" style="min-width: 600px;">
+    <tr>
+      ${detailedColumns.join("\n")}
+    </tr>
+  </table>
+</div>`;
 
   // Read general info from info.md
   const generalInfo = fs.readFileSync("info.md", "utf8");
