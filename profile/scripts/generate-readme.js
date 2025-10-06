@@ -49,11 +49,12 @@ function formatTechstack(techstack) {
   // Detailed layout with collapsible information
   const detailedColumns = validMembers.map(({ member, data }) => {
     const { role } = member;
+    const avatarUrl = `https://images.weserv.nl/?url=${data.avatar_url.split("?")[0]}&h=80&w=80&fit=cover&mask=circle&maxage=30d`;
     return `
 <td align="center">
   <a href="${data.html_url}"><strong>@${data.login}</strong></a><br/>
   <a href="${data.html_url}">
-    <img src="${data.avatar_url}" width="80" height="80" style="border-radius: 50%;" alt="@${data.login}"/>
+    <img src="${avatarUrl}" width="80" height="80" alt="@${data.login}"/>
   </a><br/>
   ${getRoleIcon(role)}<br/>
   <small><em>${member.description || 'Passionate team member'}</em></small><br/>
