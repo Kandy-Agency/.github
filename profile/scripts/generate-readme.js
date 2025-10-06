@@ -50,37 +50,35 @@ function formatTechstack(techstack) {
   const detailedColumns = validMembers.map(({ member, data }) => {
     const { role } = member;
     return `
-      <td align="center">
-
-        <a href="${data.html_url}"><strong>@${data.login}</strong></a><br/>
-        <a href="${data.html_url}">
-          <img src="${data.avatar_url}" width="80" height="80" style="border-radius: 50%;" alt="@${data.login}"/>
-        </a><br/>
-        ${getRoleIcon(role)}<br/>
-        <small><em>${member.description || 'Passionate team member'}</em></small><br/>
-        <details>
-          <summary><small>View Details</small></summary>
-          <small>
-            <strong>Key Contributions:</strong><br/>
-            ${formatContributions(member.biggest_contributions)}<br/><br/>
-            <strong>Techstack:</strong><br/>
-            ${formatTechstack(member.techstack)}<br/><br/>
-            <em>${member.fun_fact || 'Always learning something new'}</em>
-          </small>
-        </details>
-
-      </td>`;
+<td align="center">
+  <a href="${data.html_url}"><strong>@${data.login}</strong></a><br/>
+  <a href="${data.html_url}">
+    <img src="${data.avatar_url}" width="80" height="80" style="border-radius: 50%;" alt="@${data.login}"/>
+  </a><br/>
+  ${getRoleIcon(role)}<br/>
+  <small><em>${member.description || 'Passionate team member'}</em></small><br/>
+  <details>
+    <summary><small>View Details</small></summary>
+    <small>
+      <strong>Key Contributions:</strong><br/>
+      ${formatContributions(member.biggest_contributions)}<br/><br/>
+      <strong>Techstack:</strong><br/>
+      ${formatTechstack(member.techstack)}<br/><br/>
+      <em>${member.fun_fact || 'Always learning something new'}</em>
+    </small>
+  </details>
+</td>`;
   });
 
   // Create detailed table section
   const detailedTable = `
-    <h2 align="center">👥 Meet the Team</h2>
+<h2 align="center">👥 Meet the Team</h2>
 
-    <table align="center">
-      <tr>
-        ${detailedColumns.join("\n")}
-      </tr>
-    </table>`;
+<table align="center">
+  <tr>
+    ${detailedColumns.join("\n")}
+  </tr>
+</table>`;
 
   // Read general info from info.md
   const generalInfo = fs.readFileSync("profile/info.md", "utf8");
