@@ -1,4 +1,32 @@
 [
-  { "username": "eyyMinda", "role": "mid", "department": "Development" },
-  { "username": "LukasV2000", "role": "senior", "department": "Development" }
+  {
+    "username": "eyyMinda",
+    "role": "senior",
+    "department": "Development",
+    "description": "Always on to help. Full-stack code-addict ~~ Must... Refactor...",
+    "biggest_contributions": [
+      "Streamlined workflows, enforced GitHub usage, built dev docs & reusable components",
+      "Developed complex stores and features"
+    ],
+    "techstack": ["Javascript", "React", "Next.js", "TypeScript", "Liquid", "CSS/SCSS"],
+    "fun_fact": ""
+  },
+  {
+    "username": "LukasV2000",
+    "role": "senior",
+    "department": "Development",
+    "description": "No stress - No problem",
+    "biggest_contributions": ["Straightforwardly fixing issues and getting things done", "Always there for Kandy"],
+    "techstack": ["Javascript", "CSS", "React", "Liquid", "WordPress"],
+    "fun_fact": ""
+  },
+  {
+    "username": "MonnoDev",
+    "role": "junior",
+    "department": "Development",
+    "description": "",
+    "biggest_contributions": [],
+    "techstack": ["JavaScript", "CSS"],
+    "fun_fact": ""
+  }
 ]
