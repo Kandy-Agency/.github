@@ -27,7 +27,7 @@ We specialize in scalable Shopify solutions, modern web apps, and agency-level d
     <img src="https://images.weserv.nl/?url=https://avatars.githubusercontent.com/u/100799754&h=80&w=80&fit=cover&mask=circle&maxage=30d" width="80" height="80" alt="@eyyMinda"/>
   </a><br/>
   ⭐<br/>
-  <small><em>Always on to help. Full-stack code-addict ~~ Must... Refactor...</em></small><br/>
+  <small><em>Full-stack code-addict ~~ Must... Refactor...</em></small><br/>
   <details>
     <summary><small>View Details</small></summary>
     <small>
