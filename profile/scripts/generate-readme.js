@@ -83,11 +83,11 @@ function formatTechstack(techstack) {
 </div>`;
 
   // Read general info from info.md
-  const generalInfo = fs.readFileSync("info.md", "utf8");
+  const generalInfo = fs.readFileSync("profile/info.md", "utf8");
 
   // Combine general info + team section
   const finalMarkdown = `${generalInfo.trim()}\n\n${detailedTable.trim()}\n`;
 
-  fs.writeFileSync("../README.md", finalMarkdown);
+  fs.writeFileSync("profile/README.md", finalMarkdown);
   console.log("✅ README.md updated.");
 })();
