@@ -19,14 +19,5 @@
     "biggest_contributions": ["Straightforwardly fixing issues and getting things done", "Always there for Kandy"],
     "techstack": ["Javascript", "CSS", "React", "Liquid", "WordPress"],
     "fun_fact": ""
-  },
-  {
-    "username": "MonnoDev",
-    "role": "junior",
-    "department": "Development",
-    "description": "",
-    "biggest_contributions": [],
-    "techstack": ["JavaScript", "CSS"],
-    "fun_fact": ""
   }
 ]
