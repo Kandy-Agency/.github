@@ -58,24 +58,5 @@ We specialize in scalable Shopify solutions, modern web apps, and agency-level d
     </small>
   </details>
 </td>
-
-<td align="center">
-  <a href="https://github.com/MonnoDev"><strong>@MonnoDev</strong></a><br/>
-  <a href="https://github.com/MonnoDev">
-    <img src="https://images.weserv.nl/?url=https://avatars.githubusercontent.com/u/121252311&h=80&w=80&fit=cover&mask=circle&maxage=30d" width="80" height="80" alt="@MonnoDev"/>
-  </a><br/>
-  🌱<br/>
-  <small><em>Passionate team member</em></small><br/>
-  <details>
-    <summary><small>View Details</small></summary>
-    <small>
-      <strong>Key Contributions:</strong><br/>
-      • Always contributing to team success<br/><br/>
-      <strong>Techstack:</strong><br/>
-      `JavaScript` `CSS`<br/><br/>
-      <em>Always learning something new</em>
-    </small>
-  </details>
-</td>
   </tr>
 </table>
